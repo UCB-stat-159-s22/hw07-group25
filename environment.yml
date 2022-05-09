@@ -10,4 +10,5 @@ dependencies:
   - pip=21.2
   - plotly=5.7
   - nbformat>=4.2.0
+  - statsmodels
  
