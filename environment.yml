@@ -8,5 +8,6 @@ dependencies:
   - ipykernel=6.9
   - pytables=3.7
   - pip=21.2
-  - pip:
-    - cpi==1.0.0
+  - plotly=5.7
+  - nbformat>=4.2.0
+ 
