@@ -1,5 +1,6 @@
 #Adding required packages
 import numpy as np 
+import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
 
@@ -20,4 +21,7 @@ def cleanup(df, years):
     pd.to_numeric(df['2019_US_Mortality_19'])
     
     return df
+
+def change_to_float(data):
+    return data.replace('[\$,]', '', regex=True).astype(float)
 
