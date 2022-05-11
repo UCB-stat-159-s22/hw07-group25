@@ -1,0 +1,6 @@
+format: jb-book
+root: README
+parts:
+- caption: NIH Spending notebook
+  chapters:
+  - file: index
