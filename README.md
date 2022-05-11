@@ -1,9 +1,11 @@
 ## Data analysis of NIH funding by spending category
 
 **Binder:**
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s22/hw07-group25.git/main)
 
-**JupyterBook Link**
+**JupyterBook Link: **
+
 Our JupyterBook can be found at the following link: https://ucb-stat-159-s22.github.io/hw07-group25/
 
 **Note:** This repository is public so that Binder can find it. All data is based on the original [Estimates of Funding for Various Research, Condition, and Disease Categories (RCDC)](https://report.nih.gov/funding/categorical-spending#/). This repository is a class exercise that develops a complete analysis of a dataset that can be found online, as a homework assignment for the [Spring 2022 installment of UC Berkeley's Stat 159/259 course, _Reproducible and Collaborative Data Science_](https://ucb-stat-159-s22.github.io). Authorship of the original data rests with NIH.
