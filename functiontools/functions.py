@@ -7,8 +7,21 @@ from scipy.io import wavfile
 
 #Data Cleanup Function 
 
+
+
 def cleanup(df, years):
-	# replace + and - and * so they are coded as missing
+	
+	"""This function cleans NIH funding data to remove problematic excel formatting
+
+    Parameters:
+    df: pandas dataframe of NIH funding data that you want to remove +, -, * symbols from as well as dollar signs and commas from numerical values.
+	years: the number of years in your data set (column headers based on NIH format that you want to fix the formatting of
+
+    Returns:
+    df: cleaned data frame
+
+   """
+    # replace + and - and * so they are coded as missing
 	df = df.replace('+', np.NaN, regex=False)
 	df = df.replace('-', np.NaN, regex=False)
 	df = df.replace('*', np.NaN, regex=False)
@@ -17,13 +30,24 @@ def cleanup(df, years):
 	df[years] = df[years].replace('[\$,]', '', regex=True).astype(float)
 
 	# remove , in mortality
-	df['2019_US_Mortality_19'] = df['2019_US_Mortality_19'].replace('[,,]', '', regex=True).astype(float)
+	df['2019_US_Mortality_19'] = df['2019_US_Mortality_19'].replace('[,,]', '',regex=True).astype(float)
 	pd.to_numeric(df['2019_US_Mortality_19'])
 	
 	return df
 
 def draw_barchart(df, year):
 	
+	"""This function draws a barchart of NIH funding data
+
+    Parameters:
+    df: pandas dataframe of NIH funding data.
+	year: the year that you want to draw the barchart for
+
+    Returns:
+    plot
+
+   """
+
 	datayear = df[["research_category", year]]
     
 	# Based on the year it will output a top 10 spending categories for that year
@@ -42,5 +66,8 @@ def draw_barchart(df, year):
 
 
 def change_to_float(data):
+	
+	'''data is a column in a dataframe where you need to remove dollar signs and convert to float'''
+	
 	return data.replace('[\$,]', '', regex=True).astype(float)
 
